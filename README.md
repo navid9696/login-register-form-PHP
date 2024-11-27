@@ -18,7 +18,27 @@ This project is a simple PHP-based web application that includes a user login an
 - **Purpose:** 
   - Redirects users from the root page to the `/login` page.
 
-### 2. `validationForm.php`
+### 2. `login.php`
+- **Purpose:** 
+  - Displays the login form for users.
+  - Validates the provided username and password.
+  - Redirects users to the other site upon successful login.
+
+- **Key Functionalities:**
+  - Accepts username and password input.
+  - Handles error messages for incorrect or missing login credentials.
+
+### 3. `register.php`
+- **Purpose:** 
+  - Displays the registration form for new users.
+  - Validates input for username, password, and password confirmation.
+  - Ensures username uniqueness.
+
+- **Key Functionalities:**
+  - Ensures the password and confirm password match.
+  - Displays validation errors for missing or invalid input.
+
+### 4. `validationForm.php`
 - **Purpose:** 
   - Contains the logic for form validation, supporting both login and registration contexts.
 - **Key Functionalities:**
@@ -27,7 +47,7 @@ This project is a simple PHP-based web application that includes a user login an
   - Ensures passwords meet a minimum length of 6 characters.
   - Compares `password` and `confirm_password` during registration to ensure they match.
 
-### 3. `.htaccess`
+### 5. `.htaccess`
 - **Purpose:**
   - Manages URL rewriting to make links cleaner and user-friendly.
   - Handles redirections and supports requests to PHP files without including the `.php` extension.
@@ -43,9 +63,3 @@ This project is a simple PHP-based web application that includes a user login an
 2. Use the login form for user authentication or registration form for new user signup.
 3. Any missing or incorrect input will trigger validation messages.
 
----
-
-## Additional Notes
-- Ensure the Apache server is running before accessing the project.
-- Modify the `.htaccess` file only if you are familiar with its syntax.
-- For further customization, edit the `validationForm.php` file to adjust validation rules or error messages.
